@@ -7,6 +7,12 @@ import { findAnalyte, loadEducationPayload, loadPwsPayload } from '@/src/lib/loa
 const payload = loadPwsPayload();
 const education = loadEducationPayload();
 
+export function generateStaticParams() {
+  return payload.analytes.map((analyte) => ({
+    name: analyte.analyte_name,
+  }));
+}
+
 export default function ContaminantDetailScreen() {
   const { name } = useLocalSearchParams<{ name: string }>();
   const analyteName = decodeAnalyteParam(name ?? '');

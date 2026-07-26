@@ -1,11 +1,21 @@
 import { Text, View } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { GuidedView } from '@/src/components/guided/GuidedView';
-import { getConcernById, type ConcernId } from '@/src/lib/concerns';
+import {
+  ALL_CONCERNS,
+  getConcernById,
+  type ConcernId,
+} from '@/src/lib/concerns';
 import { loadEducationPayload, loadPwsPayload } from '@/src/lib/loadData';
 
 const water = loadPwsPayload();
 const education = loadEducationPayload();
+
+export function generateStaticParams() {
+  return ALL_CONCERNS.filter((concern) => concern.enabled).map((concern) => ({
+    concern: concern.id,
+  }));
+}
 
 export default function GuidedConcernScreen() {
   const { concern: concernParam } = useLocalSearchParams<{ concern: string }>();
