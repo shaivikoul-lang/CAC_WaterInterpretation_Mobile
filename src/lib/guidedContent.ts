@@ -465,23 +465,29 @@ function tasteWhyBullets(clarifyId: string): string[] {
 }
 
 function pfasWhyBullets(clarifyId: string): string[] {
+  const biggerPicture =
+    'People often first hear about PFAS through drinking water; it is a larger group of persistent chemicals tied to environmental chemistry, industry, and cleanup research—not only the tap. This guide uses Highlands Ranch public monitoring data, not a faucet test.'
   const variants: Record<string, string[]> = {
     filter: [
+      biggerPicture,
       'Not all pitchers or fridge filters remove PFAS — look for certification against PFAS reduction.',
       'Filters treat water at one tap; they do not change public system monitoring results.',
       'Boiling water does not remove PFAS and can concentrate some contaminants.',
     ],
     health: [
+      biggerPicture,
       'PFAS are a large family of chemicals; EPA has been updating drinking water standards and health references.',
       'Population studies inform regulators; they do not predict any one person’s outcome.',
       'Medical questions belong with clinicians and official EPA/CDPHE pages.',
     ],
     news: [
+      biggerPicture,
       'National news often covers new EPA rules or detections elsewhere — always check local utility reporting.',
       'Colorado and HR Water may publish updates on a different timeline than federal headlines.',
       'This tool only shows what appears in Colorado’s public EPHT export.',
     ],
     levels: [
+      biggerPicture,
       'PFOA is one of several PFAS compounds that may appear in monitoring.',
       'Limits and health references for PFAS have evolved — use EPA’s current materials for context.',
       'A single year in public data does not replace HR Water’s full consumer information.',

@@ -12,6 +12,11 @@ export const ENTRY_OPTIONS: { label: string; concernId: ConcernId; icon: string 
     icon: '💧',
   },
   {
+    label: 'I heard about PFAS',
+    concernId: 'pfas',
+    icon: '🧪',
+  },
+  {
     label: 'Is my water safe to drink?',
     concernId: 'lead',
     icon: '🏠',
@@ -40,6 +45,12 @@ export function ConcernEntry({ utilityLabel }: Props) {
       </Text>
       <Text className="mt-2.5 text-[15px] leading-relaxed text-slate-600">
         Pick one — we&apos;ll guide you through it step by step.
+      </Text>
+      <Text className="mt-3 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-3 text-[13px] leading-relaxed text-slate-600">
+        People often first hear about PFAS through drinking water. PFAS is a larger group of
+        persistent chemicals connected to environmental chemistry, industry, and cleanup
+        research—not only the tap. This tool focuses on Highlands Ranch public monitoring data.
+        It is not a test of water at your faucet.
       </Text>
 
       <DecisionPanel>

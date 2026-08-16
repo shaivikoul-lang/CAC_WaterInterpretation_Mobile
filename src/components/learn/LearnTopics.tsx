@@ -74,7 +74,9 @@ export function LearnTopics() {
       id: 'pfas',
       title: 'PFAS overview',
       body: [
-        'PFAS is a family of chemicals. This file may include compounds such as PFOA, PFOS, PFBS, PFHxS, and PFNA. Rules and scoring differ by compound—some rows are not auto-scored; the app shows measured values and official links without inventing a risk score.',
+        'People often first hear about PFAS through drinking water. PFAS is a larger group of persistent chemicals connected to environmental chemistry, industry, and cleanup research—not only the tap.',
+        'This tool focuses on Highlands Ranch public monitoring data and explains what is reported in plain language. It is not a test of water at your faucet.',
+        'This file may include compounds such as PFOA, PFOS, PFBS, PFHxS, and PFNA. Rules and scoring differ by compound—some rows are not auto-scored; the app shows measured values and official links without inventing a risk score.',
         'Use EPA and CDPHE pages for current rules and health reference material.',
       ],
       actions: [
